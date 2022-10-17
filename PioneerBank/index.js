@@ -21,10 +21,18 @@ function updateSpanText(id,addNumber) {
      depositBtn.addEventListener("click",function(){
         const depositAmount= document.getElementById("depositAmount").value;
         const depositNumber = parseFloat(depositAmount);
-        updateSpanText("currentDeposit",depositNumber );
-        updateSpanText("currentBalance",depositNumber );
-
-        document.getElementById("depositAmount").value="";
+        if (depositNumber<0) {
+            alert("Enter valid Deposit.");
+            document.getElementById("depositAmount").value="";
+            document.getElementById("depositAmount").value="";
+        }
+        else{
+            updateSpanText("currentDeposit",depositNumber );
+            updateSpanText("currentBalance",depositNumber );
+    
+            document.getElementById("depositAmount").value="";
+        }
+       
 
        
         /*const currentDeposit = document.getElementById("currentDeposit").innerText;
@@ -49,10 +57,16 @@ function updateSpanText(id,addNumber) {
     WithdrawBtn.addEventListener("click",function(){
         const withdrawAmount= document.getElementById("withdrawAmount").value;
         const withdrawAmountNumber = parseFloat(withdrawAmount);
+        if (withdrawAmountNumber<0) {
+            alert("Enter valid Withdraw.");
+        }
+        else{
+            updateSpanText("currentWithdraw",withdrawAmountNumber);
+            updateSpanText("currentBalance",-1*withdrawAmountNumber);
+            document.getElementById("withdrawAmount").value="";
+        }
 
-        updateSpanText("currentWithdraw",withdrawAmountNumber);
-        updateSpanText("currentBalance",-1*withdrawAmountNumber);
-        document.getElementById("withdrawAmount").value="";
+       
         /*const currentWithdraw= document.getElementById("currentWithdraw").innerText;
         const currentWithdrawNumber = parseFloat(currentWithdraw);
         const totalWithdraw = withdrawAmountNumber + currentWithdrawNumber;

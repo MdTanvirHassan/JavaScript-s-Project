@@ -1,5 +1,5 @@
 
-const API_KEY = `46ad7457603b9b0104e633e78cd60e16`;
+const API_KEY = `f2dbb0b8804d25eeaa44b0c5333f7ded`;
 const searchTemperature = () => {
     const city = document.getElementById('city-name').value;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
@@ -14,7 +14,7 @@ const setInnerText = (id, text) => {
 }
 
 const displayTemperature = temperature => {
-    setInnerText('city', temperature.name='Dhaka');
+    setInnerText('city', temperature.name);
     setInnerText('temperature', temperature.main.temp);
     setInnerText('condition', temperature.weather[0].main);
     // set weather icon
@@ -22,5 +22,3 @@ const displayTemperature = temperature => {
     const imgIcon = document.getElementById('weather-icon');
     imgIcon.setAttribute('src', url);
 }
-
-//setInterval(()=> {data.API_KEY},200);

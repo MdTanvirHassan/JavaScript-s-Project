@@ -1,0 +1,52 @@
+.F{
+    width: 400px;
+    display:inline;
+    background: greenyellow;
+    height: 50px;
+    margin-bottom: 5px;
+    border: 2px solid green;
+   }
+   .btn{
+    border: 2px solid greenyellow;
+     background: green;
+     border-radius: 25px;
+     color: white;
+     margin-left: 5px;
+   }
+   .container{
+    margin: 12vh;
+   }
+
+   #user-container p{
+    border: 2px solid greenyellow;
+    background: lavender;
+    border-radius: 5px;
+    color: black;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+  }
+
+   #user-container button{
+     border: 2px solid greenyellow;
+     background: green;
+     border-radius: 25px;
+     color: white;
+     margin-left: 5px;
+   }
+   #user-container button:hover{
+    border: 2px solid greenyellow;
+    background: greenyellow;
+    color: black;
+    font-weight: bold;
+  }
+
+   #user-details {
+    border: 2px solid green;
+    width: 400px;
+    padding: 0px;
+    text-align: center;
+    background-color: greenyellow;
+    border-radius: 15px;
+    color: black!important;
+   }
